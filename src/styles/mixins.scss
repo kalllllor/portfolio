@@ -1,0 +1,30 @@
+@mixin respond-to($breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @if $value {
+        @media (min-width: #{$value}) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint '#{$breakpoint}' not found in $breakpoints.";
+    }
+}
+
+@mixin respond-down($breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @if $value {
+        @media (max-width: #{$value}) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint '#{$breakpoint}' not found in $breakpoints.";
+    }
+}
+
+@mixin max-width($breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+    @if $value {
+        max-width: #{$value};
+    } @else {
+        @warn "Max-width value for '#{$breakpoint}' not found in $max-widths.";
+    }
+}

@@ -1,0 +1,34 @@
+.wrapper {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    background-color: $black;
+    top: calc(var(--top) * 4);
+    bottom: calc(var(--bottom) * 4);
+    left: calc(var(--left) * 4);
+    right: calc(var(--right) * 4);
+    @include respond-down(medium) {
+        width: 2rem;
+        height: 2rem;
+        top: calc(var(--top) * 2);
+        bottom: calc(var(--bottom) * 2);
+        left: calc(var(--left) * 2);
+        right: calc(var(--right) * 2);
+    }
+}
+
+.wrapper::after {
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $white;
+    border-radius: 0 0 0 60px;
+
+    @include respond-down(medium) {
+        width: 2rem;
+        height: 2rem;
+    }
+}

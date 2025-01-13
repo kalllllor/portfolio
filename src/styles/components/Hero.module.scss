@@ -1,0 +1,226 @@
+.wrapper {
+    background-color: $white;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    padding: 10rem 0rem 5rem 0rem;
+    display: flex;
+    align-items: flex-end;
+
+    @include respond-down(xxlarge) {
+        @include max-width(xlarge);
+    }
+
+    @include respond-down(xlarge) {
+        @include max-width(large);
+    }
+
+    @include respond-down(large) {
+        @include max-width(medium);
+    }
+
+    @include respond-down(medium) {
+        @include max-width(small);
+    }
+
+    @include respond-down(small) {
+        max-width: 100%;
+    }
+}
+
+.left-bar {
+    background-color: $black;
+    position: absolute;
+    z-index: 2;
+    width: 4rem;
+    height: 50%;
+    left: 0rem;
+    top: 0rem;
+    border-radius: 0rem 0rem 4rem 0rem;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+
+    @include respond-down(medium) {
+        width: 2rem;
+    }
+
+    @include respond-down(xmedium) {
+        top: 6rem;
+        width: 2rem;
+    }
+}
+
+.top-bar {
+    background-color: $black;
+    z-index: 2;
+    position: absolute;
+    height: 4rem;
+    width: 75%;
+    top: 0rem;
+    left: 4rem;
+    border-radius: 0rem 0rem 4rem 0rem;
+
+    @include respond-down(large) {
+        width: calc(100% - 4rem);
+    }
+
+    @include respond-down(medium) {
+        left: 2rem;
+        height: 2rem;
+    }
+
+    @include respond-down(xmedium) {
+        display: none;
+    }
+}
+
+.bar-title {
+    background-color: $black;
+    position: absolute;
+    top: 4rem;
+    border-radius: 0rem 0rem 4rem 4rem;
+    h3 {
+        font-size: 4rem;
+        color: $white;
+        padding: 1.5rem 2rem;
+    }
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+
+    @include respond-down(xxlarge) {
+        h3 {
+            font-size: 3rem;
+            padding: 1rem 2rem;
+        }
+    }
+
+    @include respond-down(medium) {
+        top: 2rem;
+        h3 {
+            font-size: 2.5rem;
+        }
+    }
+
+    @include respond-down(xmedium) {
+        border-radius: 0rem;
+        top: 0rem;
+        width: 100%;
+        height: 6rem;
+        box-shadow: none;
+    }
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    padding: 10rem 0rem;
+    display: flex;
+    align-items: flex-end;
+
+    @include respond-down(xxlarge) {
+        @include max-width(xlarge);
+    }
+
+    @include respond-down(xlarge) {
+        @include max-width(large);
+    }
+
+    @include respond-down(large) {
+        @include max-width(medium);
+    }
+
+    @include respond-down(medium) {
+        @include max-width(small);
+    }
+
+    @include respond-down(small) {
+        max-width: 100%;
+    }
+
+    .scroll-down {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        bottom: 6rem;
+        right: 0px;
+        img {
+            width: 2rem;
+            height: auto;
+            margin-right: 0.5rem;
+        }
+    }
+
+    h2 {
+        font-size: 6rem;
+
+        @include respond-down(large) {
+            font-size: 3rem;
+        }
+    }
+}
+
+.socials {
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    left: 7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        margin: 0rem 0.25rem;
+    }
+
+    .inner-wrapper {
+        display: flex;
+    }
+
+    .small-wrapper a,
+    .big-wrapper a {
+        transition: transform 0.1s ease;
+    }
+
+    .small-wrapper a:hover {
+        transform: translateY(1rem);
+    }
+
+    .big-wrapper a:hover {
+        transform: translateY(2.6rem);
+    }
+
+    @include respond-down(xlarge) {
+        flex-direction: column;
+        align-items: center;
+        top: 8rem;
+        left: 1rem;
+        a {
+            margin-bottom: 0.25rem;
+        }
+        .inner-wrapper {
+            flex-direction: column;
+        }
+
+        .small-wrapper a:hover {
+            transform: translateX(1rem);
+        }
+
+        .big-wrapper a:hover {
+            transform: translateX(2.6rem);
+        }
+    }
+
+    @include respond-down(medium) {
+        left: -1rem;
+    }
+}

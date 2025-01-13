@@ -1,0 +1,40 @@
+.wrapper {
+    background-color: $white;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    padding: 10rem 0rem;
+    display: flex;
+    align-items: flex-end;
+
+    @include respond-down(xxlarge) {
+        @include max-width(xlarge);
+    }
+
+    @include respond-down(xlarge) {
+        @include max-width(large);
+    }
+
+    @include respond-down(large) {
+        @include max-width(medium);
+    }
+
+    @include respond-down(medium) {
+        @include max-width(small);
+    }
+
+    @include respond-down(small) {
+        max-width: 100%;
+    }
+}
