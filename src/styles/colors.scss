@@ -1,3 +1,8 @@
-$white: #e6e6e6;
-$black: #212227;
+:root {
+    --first-color: #e6e6e6;
+    --secondary-color: #212227;
+}
+
+$first: var(--first-color);
+$secondary: var(--secondary-color);
 $blue: #6f8db5;

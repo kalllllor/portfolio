@@ -18,5 +18,11 @@ export interface CornerProps {
 
 export interface SingleProjectProps {
     title: string;
-    isFirst?: boolean;
+    isFirst: boolean;
+    isLast: boolean;
+    onClick?: () => void;
+}
+
+export interface ThemeSwitcherProps {
+    titleBarWidth?: number;
 }

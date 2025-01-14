@@ -1,0 +1,88 @@
+.switchButton {
+    position: absolute;
+    top: 6rem;
+    right: var(--title-bar-offset);
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--secondary-color);
+    color: var(--first-color);
+    border: var(--secondary-color) 2px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9999;
+    overflow: hidden;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+    @include respond-down(medium) {
+        width: 1.5rem;
+        height: 1.5rem;
+        top: 3rem;
+    }
+
+    @include respond-down(small) {
+        right: 1rem;
+        top: 1rem;
+    }
+    .icon {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition:
+            transform 1s,
+            opacity 1s;
+    }
+
+    .sun {
+        opacity: 0;
+    }
+
+    .moon {
+        opacity: 1;
+    }
+
+    &.dark-mode .sun {
+        animation: showUp 0.3s linear forwards;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &.dark-mode .moon {
+        animation: goDown 0.3s linear forwards;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    &.light-mode .sun {
+        animation: goDown 0.3s linear forwards;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    &.light-mode .moon {
+        animation: showUp 0.3s linear forwards;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    @keyframes showUp {
+        0% {
+            transform: translate(-30px);
+        }
+        100% {
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    @keyframes goDown {
+        0% {
+            transform: translate(-50%, -50%);
+        }
+        100% {
+            transform: translate(30px);
+        }
+    }
+}

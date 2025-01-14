@@ -1,11 +1,14 @@
 .wrapper {
     background-color: $first;
     width: 100%;
-
     position: relative;
+
+    @include respond-down(medium) {
+        padding: 0rem 0.5rem;
+    }
 }
 
-.title {
+.content {
     position: relative;
     width: 100%;
     max-width: 1440px;
@@ -42,6 +45,16 @@
 
         @include respond-down(large) {
             font-size: 3rem;
+        }
+    }
+
+    p {
+        display: block;
+        max-width: 75%;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        @include respond-down(large) {
+            max-width: 100%;
         }
     }
 

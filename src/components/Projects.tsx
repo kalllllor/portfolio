@@ -1,6 +1,7 @@
 import styles from '../styles/components/Projects.module.scss';
 import data from '../assets/project-data.json';
 import SingleProject from './SingleProject';
+
 const Projects = () => {
     return (
         <div className={styles.wrapper}>
@@ -9,7 +10,7 @@ const Projects = () => {
             </div>
             <div className={styles.content}>
                 {data.projects.map((item, index) => (
-                    <SingleProject title={item.name} />
+                    <SingleProject key={index} title={item.name} isFirst={index === 0} isLast={index === data.projects.length - 1} />
                 ))}
             </div>
         </div>

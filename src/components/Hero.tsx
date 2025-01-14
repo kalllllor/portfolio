@@ -1,12 +1,22 @@
 import styles from '../styles/components/Hero.module.scss';
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Social from './Social';
 import Menu from './Menu';
 import Corner from './Corner';
+import ThemeSwitcher from './ThemeSwitcher';
 
 const Hero = () => {
     const wrapperRef = useRef<HTMLDivElement>(null);
+    const titleBarRef = useRef<HTMLDivElement>(null);
+    const [titleBarWidth, setTitleBarWidth] = useState<number | null>(null);
+
+    useEffect(() => {
+        if (titleBarRef.current) {
+            setTitleBarWidth(titleBarRef.current.offsetWidth);
+        }
+    }, []);
+
     const cornerStyles = {
         first: { '--top': window.innerWidth > 540 ? '1rem' : '3rem', '--left': '1rem', transform: 'rotate(90deg)' },
         second: { '--top': '0rem', '--left': '-1rem', transform: 'rotate(180deg)' },
@@ -18,10 +28,11 @@ const Hero = () => {
 
     return (
         <div className={styles.wrapper}>
+            <ThemeSwitcher titleBarWidth={titleBarWidth} />
             <span className={styles['left-bar']} />
-            <span className={styles['top-bar']} />
+            <div className={styles['top-bar']}> </div>
             <Corner customStyle={cornerStyles.first} />
-            <div className={styles['bar-title']}>
+            <div className={styles['bar-title']} ref={titleBarRef}>
                 <h3>new media arts</h3>
                 <Corner customStyle={cornerStyles.second} />
                 <Corner customStyle={cornerStyles.third} />

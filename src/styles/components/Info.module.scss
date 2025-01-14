@@ -1,20 +1,20 @@
 .wrapper {
     width: 144px;
     min-height: 512px;
-    background-color: $black;
+    background-color: $secondary;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    color: $white;
-    position: absolute;
+    color: $first;
+    position: fixed;
     right: 0px;
     top: 50%;
     transform: translateY(-50%);
     padding: 16px;
     border-radius: 25px 0px 0px 25px;
     box-shadow: -3px 0px 3px rgba(0, 0, 0, 0.25);
-
+    z-index: 9998;
     @include respond-down(medium) {
         display: none;
     }

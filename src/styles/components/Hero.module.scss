@@ -1,5 +1,5 @@
 .wrapper {
-    background-color: $white;
+    background-color: $first;
     width: 100%;
     height: 100vh;
     min-height: 100vh;
@@ -40,7 +40,7 @@
 }
 
 .left-bar {
-    background-color: $black;
+    background-color: $secondary;
     position: absolute;
     z-index: 2;
     width: 4rem;
@@ -61,7 +61,7 @@
 }
 
 .top-bar {
-    background-color: $black;
+    background-color: $secondary;
     z-index: 2;
     position: absolute;
     height: 4rem;
@@ -85,13 +85,15 @@
 }
 
 .bar-title {
-    background-color: $black;
+    background-color: $secondary;
     position: absolute;
     top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
     border-radius: 0rem 0rem 4rem 4rem;
     h3 {
         font-size: 4rem;
-        color: $white;
+        color: $first;
         padding: 1.5rem 2rem;
     }
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);

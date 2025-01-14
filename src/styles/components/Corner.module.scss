@@ -2,7 +2,7 @@
     width: 4rem;
     height: 4rem;
     position: absolute;
-    background-color: $black;
+    background-color: $secondary;
     top: calc(var(--top) * 4);
     bottom: calc(var(--bottom) * 4);
     left: calc(var(--left) * 4);
@@ -24,8 +24,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: $white;
-    border-radius: 0 0 0 60px;
+    background-color: $first;
+    border-radius: 0 0 0 4rem;
 
     @include respond-down(medium) {
         width: 2rem;

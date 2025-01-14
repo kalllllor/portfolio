@@ -4,6 +4,7 @@ import styles from '../styles/components/Menu.module.scss';
 const Menu: React.FC = () => {
     const [selected, setSelected] = useState<string>('HOME');
     const [hoverStyle, setHoverStyle] = useState<{ left: string; width: string }>({ left: '0px', width: '0px' });
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
     const menuItems = ['HOME', 'ABOUT', 'CONTACT', 'GALLERY'];
@@ -30,8 +31,21 @@ const Menu: React.FC = () => {
         }
     }, [containerRef.current]);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            setIsScrolled(scrollPosition > viewportHeight / 2);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <div className={styles.wrapper}>
+        <div className={`${styles.wrapper} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={styles.container} ref={containerRef}>
                 {menuItems.map((item, index) => (
                     <div
