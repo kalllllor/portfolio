@@ -1,59 +1,46 @@
-.project-page {
-    padding: 2rem;
-    color: $secondary;
-    background-color: $first;
+.wrapper {
+    background-color: $secondary;
+    color: $first;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
 
-    h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    height: 100%;
+    padding: 5rem 0rem 5rem 0rem;
+    margin: 0 auto;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include respond-down(xxlarge) {
+        @include max-width(xlarge);
     }
 
-    p {
-        font-size: 1.25rem;
-        margin-bottom: 1rem;
+    @include respond-down(xlarge) {
+        @include max-width(large);
     }
 
-    .media-container {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    @include respond-down(large) {
+        @include max-width(medium);
     }
 
-    .video-player {
+    @include respond-down(medium) {
+        @include max-width(small);
+    }
+
+    @include respond-down(small) {
+        max-width: 100%;
+    }
+
+    video {
         width: 100%;
-        max-width: 800px;
-        position: relative;
-
-        video {
-            width: 100%;
-        }
-
-        .controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 1rem;
-
-            button {
-                padding: 0.5rem 1rem;
-                background-color: $secondary;
-                color: $first;
-                border: none;
-                cursor: pointer;
-                transition: background-color 0.3s;
-
-                &:hover {
-                    background-color: lighten($secondary, 10%);
-                }
-            }
-
-            input[type='range'] {
-                width: 100px;
-            }
-        }
     }
+
 
     .carousel {
         display: flex;
@@ -66,10 +53,6 @@
             border: none;
             cursor: pointer;
             transition: background-color 0.3s;
-
-            &:hover {
-                background-color: lighten($secondary, 10%);
-            }
         }
 
         img {
@@ -77,5 +60,57 @@
             max-height: 80vh;
             margin: 0 1rem;
         }
+    }
+
+    .video-player {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .controls {
+
+input {
+  -webkit-appearance: none;
+  appearance: none; 
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+input::-webkit-slider-runnable-track {
+  height: 15px;
+  background: #ccc;
+  border-radius: 16px;
+}
+
+input::-moz-range-track {
+  height: 15px;
+  background: #ccc;
+  border-radius: 16px;
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none; 
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #f50;
+  box-shadow: -407px 0 0 400px #f50;
+}
+
+input::-moz-range-thumb {
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #f50;
+  box-shadow: -407px 0 0 400px #f50;
+}
     }
 }

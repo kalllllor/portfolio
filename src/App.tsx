@@ -7,16 +7,35 @@ import Projects from './components/Projects';
 import CanvasBackground from './components/CanvasBackground';
 import styles from './styles/components/App.module.scss';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import ProjectPage from './components/ProjectPage';
+
 const App: React.FC = () => {
     return (
-        <div className={styles.wrapper}>
-            <Hero />
-            <Info />
-            <Projects />
-            <About />
-            <Contact />
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="*" element={<NoMatch />} />
+                <Route path="/projects/:projectId" element={<ProjectPage />} />
+            </Routes>
+        </Router>
     );
 };
+
+const Home: React.FC = () => (
+    <div className={styles.wrapper}>
+        <Hero />
+        <Info />
+        <Projects />
+        <About />
+        <Contact />
+    </div>
+);
+
+const NoMatch: React.FC = () => (
+    <div className={styles.wrapper}>
+        <h1>404 - Not Found</h1>
+        <Link to="/">Go Home</Link>
+    </div>
+);
 
 export default App;

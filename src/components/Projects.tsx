@@ -1,6 +1,7 @@
 import styles from '../styles/components/Projects.module.scss';
 import data from '../assets/project-data.json';
 import SingleProject from './SingleProject';
+import { Link } from 'react-router-dom';
 
 const Projects = () => {
     return (
@@ -10,7 +11,9 @@ const Projects = () => {
             </div>
             <div className={styles.content}>
                 {data.projects.map((item, index) => (
-                    <SingleProject key={index} title={item.name} isFirst={index === 0} isLast={index === data.projects.length - 1} />
+                    <Link to={`/projects/${item.id}`} key={index}>
+                        <SingleProject key={index} title={item.name} isFirst={index === 0} isLast={index === data.projects.length - 1} />
+                    </Link>
                 ))}
             </div>
         </div>

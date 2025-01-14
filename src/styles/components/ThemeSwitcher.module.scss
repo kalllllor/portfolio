@@ -13,7 +13,11 @@
     overflow: hidden;
     transition:
         background-color 0.3s,
-        color 0.3s;
+        color 0.3s,
+        transform 0.3s;
+    &:hover {
+        transform: scale(1.1);
+    }
     @include respond-down(medium) {
         width: 1.5rem;
         height: 1.5rem;
