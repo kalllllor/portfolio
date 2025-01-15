@@ -1,0 +1,64 @@
+.wrapper {
+    width: 100%;
+    position: relative;
+
+    @include respond-down(medium) {
+        padding: 0rem 0.5rem;
+    }
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 5rem 0rem 5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include respond-down(xxlarge) {
+        @include max-width(xlarge);
+    }
+
+    @include respond-down(xlarge) {
+        @include max-width(large);
+    }
+
+    @include respond-down(large) {
+        @include max-width(medium);
+    }
+
+    @include respond-down(medium) {
+        @include max-width(small);
+    }
+
+    @include respond-down(small) {
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 6rem;
+
+        @include respond-down(large) {
+            font-size: 3rem;
+        }
+    }
+
+    p {
+        text-align: justify;
+        display: block;
+        max-width: 50%;
+        font-size: 1rem;
+        margin-bottom: 2rem;
+        @include respond-down(large) {
+            max-width: 100%;
+        }
+    }
+
+    @include respond-down(large) {
+        padding: 3rem 0rem 1.5rem 0rem;
+    }
+}

@@ -45,7 +45,7 @@
                 "Projekt podkreśla możliwości technologii w kontekście sztuki i przestrzeni publicznych, łącząc zaawansowaną analizę danych z artystycznym wyrazem. Dzięki wykorzystaniu TouchDesigner i OpenCV, stworzono narzędzie, które nie tylko monitoruje, ale także wizualnie interpretuje relacje w przestrzeni galerii, nadając jej nowy wymiar interaktywności i głębi."
             ],
             "videoUrl": "test-video.mp4",
-            "media": [],
+            "media": ["video.mp4", "video2.mp4"],
             "tags": ["Monitoring", "Machine Learning", "Touchdesigner"]
         }
     ]

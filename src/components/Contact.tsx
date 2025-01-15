@@ -15,12 +15,11 @@ const Contact: React.FC = () => {
     return (
         <div className={styles.wrapper} id="contact">
             <div className={styles.content}>
-                <h2>Contact Us</h2>
+                <h2>Contact Me!</h2>
                 <div>
                     <h3>Contact Details</h3>
-                    <p>Email: your-email@example.com</p>
-                    <p>Phone: +123 456 7890</p>
-                    <p>Address: 123 Your Street, Your City, Your Country</p>
+                    <p>Email: karolgren3@gmail.com</p>
+                    <p>Phone: +48 883 230 811</p>
                 </div>
                 <div className={styles.form}>
                     <h3>Send us a message</h3>

@@ -7,7 +7,7 @@ const Menu: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
-    const menuItems = ['HOME', 'PROJECTS', 'ABOUT', 'CONTACT'];
+    const menuItems = ['HOME', 'PROJECTS', 'ABOUT', 'TECHNOLOGY', 'CONTACT'];
 
     const handleClick = (item: string, index: number) => {
         console.log(item);

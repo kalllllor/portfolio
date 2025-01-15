@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import styles from './styles/components/App.module.scss';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProjectPage from './components/ProjectPage';
+import Technology from './components/Technology';
 
 const App: React.FC = () => {
     useEffect(() => {
@@ -37,6 +38,7 @@ const Home: React.FC = () => (
         <Info />
         <Projects />
         <About />
+        <Technology />
         <Contact />
     </div>
 );

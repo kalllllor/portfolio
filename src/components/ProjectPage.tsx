@@ -62,10 +62,12 @@ const ProjectPage: React.FC = () => {
     const { name, description, media, tags, folder } = project;
 
     const handleNextPhoto = () => {
+        setIsPlaying(false);
         setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % (media?.length || 1));
     };
 
     const handlePrevPhoto = () => {
+        setIsPlaying(false);
         setCurrentPhotoIndex((prevIndex) => (prevIndex - 1 + (media?.length || 1)) % (media?.length || 1));
     };
 

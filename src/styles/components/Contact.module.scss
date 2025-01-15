@@ -5,6 +5,19 @@
     @include respond-down(medium) {
         padding: 0rem 0.5rem;
     }
+    .form {
+        width: 100%;
+    }
+    label {
+        display: block;
+    }
+    input,
+    textarea {
+        background: $first;
+        border: 4px solid $secondary;
+        width: 25%;
+        height: 3rem;
+    }
 }
 
 .content {
@@ -33,6 +46,13 @@
 
     @include respond-down(medium) {
         @include max-width(small);
+        input,
+        textarea {
+            background: $first;
+            border: 4px solid $secondary;
+            width: 90%;
+            height: 3rem;
+        }
     }
 
     @include respond-down(small) {

@@ -30,9 +30,9 @@ const Hero = () => {
             <ThemeSwitcher titleBarWidth={titleBarWidth} />
             <div className={styles['left-bar']}>
                 <div className={styles.socials}>
-                    <SocialButton isBig link="www.google.com" icon="instagram" />
-                    <SocialButton isBig link="www.google.com" icon="messenger" />
-                    <SocialButton isBig link="www.google.com" icon="github" />
+                    <SocialButton isBig link="https://www.instagram.com/karolgren" icon="instagram" />
+                    <SocialButton isBig link="www.facebook.com" icon="messenger" />
+                    <SocialButton isBig link="https://github.com/kalllllor" icon="github" />
                 </div>
             </div>
             <div className={styles['top-bar']}> </div>
