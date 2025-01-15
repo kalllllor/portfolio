@@ -1,5 +1,4 @@
 .wrapper {
-    background-color: $first;
     width: 100%;
     position: relative;
 
@@ -49,8 +48,9 @@
     }
 
     p {
+        text-align: justify;
         display: block;
-        max-width: 75%;
+        max-width: 50%;
         font-size: 1rem;
         margin-bottom: 2rem;
         @include respond-down(large) {

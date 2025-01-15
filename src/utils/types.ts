@@ -31,4 +31,5 @@ export interface ThemeSwitcherProps {
 
 export interface SocialButtonProps {
     icon: 'github' | 'messenger' | 'instagram';
+    link: string;
 }

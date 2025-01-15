@@ -18,6 +18,10 @@
     @include respond-down(medium) {
         display: none;
     }
+
+    span {
+        display: block;
+    }
 }
 
 .info {

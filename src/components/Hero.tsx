@@ -1,10 +1,9 @@
 import styles from '../styles/components/Hero.module.scss';
 import { useEffect, useRef, useState } from 'react';
-
-import Social from './Social';
 import Menu from './Menu';
 import Corner from './Corner';
 import ThemeSwitcher from './ThemeSwitcher';
+import { SocialButton } from './SocialButton';
 
 const Hero = () => {
     const wrapperRef = useRef<HTMLDivElement>(null);
@@ -29,7 +28,13 @@ const Hero = () => {
     return (
         <div className={styles.wrapper}>
             <ThemeSwitcher titleBarWidth={titleBarWidth} />
-            <span className={styles['left-bar']} />
+            <div className={styles['left-bar']}>
+                <div className={styles.socials}>
+                    <SocialButton isBig link="www.google.com" icon="instagram" />
+                    <SocialButton isBig link="www.google.com" icon="messenger" />
+                    <SocialButton isBig link="www.google.com" icon="github" />
+                </div>
+            </div>
             <div className={styles['top-bar']}> </div>
             <Corner customStyle={cornerStyles.first} />
             <div className={styles['bar-title']} ref={titleBarRef}>
@@ -37,16 +42,7 @@ const Hero = () => {
                 <Corner customStyle={cornerStyles.second} />
                 <Corner customStyle={cornerStyles.third} />
             </div>
-            <div className={styles.socials}>
-                <div className={`${styles['inner-wrapper']} ${styles['small-wrapper']}`}>
-                    <Social size="small" img="facebook-black" link="" />
-                    <Social size="small" img="instagram-black" link="" />
-                    <Social size="small" img="github-black" link="" />
-                </div>
-                <div className={`${styles['inner-wrapper']} ${styles['big-wrapper']}`}>
-                    <Social size="big" img="qr" link="" inverted />
-                </div>
-            </div>
+
             <div className={styles.content} ref={wrapperRef}>
                 <Menu />
                 <div className={styles['scroll-down']}>

@@ -1,73 +1,54 @@
-import P5Sketch from '../lib/P5Sketch';
-import P5 from 'p5';
+import React, { useRef, useEffect } from 'react';
+import styles from '../styles/components/CanvasBackground.module.scss';
+import p5 from 'p5';
 
-import { proxy } from 'valtio';
+const CanvasBackground: React.FC = () => {
+    const myRef = useRef<HTMLDivElement>(null);
+    let pg;
+    const Sketch = (p: p5) => {
+        const firstColor = getComputedStyle(document.documentElement).getPropertyValue('--first-color');
+        const secondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
 
-export const store = proxy<{
-    yFrequency: number;
-    xFrequency: number;
-    needsClear: boolean;
-    fps: number;
-}>({ yFrequency: 1.7, xFrequency: 2.1, needsClear: false, fps: 60 });
+        p.setup = () => {
+            pg = p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
+            p.angleMode(p.DEGREES);
+            p.background(firstColor);
+            p.strokeWeight(5);
+            p.noFill();
+            p.stroke(secondaryColor);
+        };
 
-export default class MySketch extends P5Sketch {
-    radius: number = 100;
-    points: { x: number; y: number }[] = [];
+        p.draw = () => {
+            p.background(firstColor);
 
-    currentPoint(p: P5): { x: number; y: number } {
-        const t = p.millis() / 1000;
-        const xangle = (store.xFrequency * (t * p.TWO_PI)) / 2;
-        const yangle = (store.yFrequency * (t * p.TWO_PI)) / 2;
-        return { x: p.cos(xangle) * this.radius, y: p.sin(yangle) * this.radius };
-    }
+            p.orbitControl();
 
-    resetPoints(p: P5): void {
-        const point = this.currentPoint(p);
-        this.points = [];
-        for (let i = 0; i < 10; i++) {
-            this.points.push(point);
-        }
-    }
+            for (let zAngle = 0; zAngle < 180; zAngle += 30) {
+                for (let xAngle = 0; xAngle < 360; xAngle += 30) {
+                    p.push();
 
-    addPoint(p: P5): void {
-        const point = this.currentPoint(p);
-        this.points.push(point);
-        this.points.shift();
-    }
-
-    setup(p: P5): void {
-        p.stroke(255, 255, 255, 15);
-    }
-
-    draw(p: P5): void {
-        if (p.frameCount % 30 == 0) {
-            store.fps = p.frameRate();
-        }
-
-        if (store.needsClear) {
-            p.background(0, 0, 0, 255);
-            this.resetPoints(p);
-            store.needsClear = false;
-        } else {
-            p.background(0, 0, 0, 5);
-        }
-        this.addPoint(p);
-
-        p.translate(p.width / 2, p.height / 2);
-
-        for (let i = 0; i < this.points.length; i++) {
-            const start = this.points[i];
-            for (let j = 0; j < this.points.length; j++) {
-                if (i == j) continue;
-                const end = this.points[j];
-                p.line(start.x, start.y, end.x, end.y);
+                    p.rotateZ(zAngle);
+                    p.rotateX(xAngle);
+                    p.translate(0, 400, 0);
+                    p.box();
+                    p.pop();
+                }
             }
-        }
-    }
+        };
 
-    canvasResized = (p: P5, w: number, h: number) => {
-        p.background(0);
-        this.radius = p.min(w, h) / 2.2;
-        this.resetPoints(p);
+        p.windowResized = () => {
+            p.resizeCanvas(p.windowWidth, p.windowHeight);
+            p.background(firstColor);
+        };
     };
-}
+
+    useEffect(() => {
+        if (myRef.current) {
+            new p5(Sketch, myRef.current);
+        }
+    }, []);
+
+    return <div ref={myRef} className={styles.wrapper}></div>;
+};
+
+export default CanvasBackground;

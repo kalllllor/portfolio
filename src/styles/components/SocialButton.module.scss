@@ -1,0 +1,43 @@
+.wrapper {
+    width: var(--size);
+    height: var(--size);
+    margin: 1rem 0rem;
+    background-color: $first;
+    svg {
+        fill: $secondary;
+    }
+    border: 2px solid $first;
+    border-radius: 50%;
+    transition:
+        background-color 0.3s,
+        fill 0.3s;
+    a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &:hover {
+        background-color: $secondary;
+        svg {
+            fill: $first;
+        }
+    }
+
+    @include respond-down(medium) {
+        width: var(--size) / 4;
+        height: var(--size) / 4;
+        background-color: $secondary;
+        svg {
+            fill: $first;
+        }
+        &:hover {
+            background-color: $first;
+            svg {
+                fill: $secondary;
+            }
+        }
+    }
+}

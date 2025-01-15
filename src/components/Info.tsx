@@ -33,10 +33,10 @@ const Info: React.FC<InfoProps> = ({ onButtonClick1, onButtonClick2, onButtonCli
     return (
         <div className={styles.wrapper}>
             <div className={styles.info}>
-                <p>
+                <span>
                     Coordinates: ({coords.x}, {coords.y})
-                </p>
-                <p>Click count: {clickCount}</p>
+                </span>
+                <span>Click count: {clickCount}</span>
             </div>
             <div>
                 <button onClick={onButtonClick1}>Button 1</button>
