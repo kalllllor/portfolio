@@ -12,11 +12,11 @@
     max-width: 1440px;
     min-height: 100vh;
     height: 100%;
-    padding: 5rem 0rem 5rem 0rem;
-    margin: 0 auto;
+    margin: 5rem auto 5rem auto;
+
     align-items: center;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     @include respond-down(xxlarge) {
         @include max-width(xlarge);
     }
@@ -37,10 +37,35 @@
         max-width: 100%;
     }
 
-    video {
-        width: 100%;
+    .info {
+        height: 100%;
+        margin-right: 2rem;
+        h2 {
+            font-size: 6rem;
+
+            @include respond-down(large) {
+                font-size: 3rem;
+            }
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
     }
 
+    .media-container {
+        position: relative;
+        border: 0.5rem solid $first;
+        border-radius: 4rem;
+        margin: 0 2rem;
+        background-color: $first;
+        video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
 
     .carousel {
         display: flex;
@@ -62,55 +87,110 @@
         }
     }
 
+    .video-container,
     .video-player {
-        display:flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .video-player {
+        border-radius: 64px;
+        overflow: hidden;
+    }
+
+    .controls,
+    .timer {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        height: 3rem;
+        width: 100%;
+        padding: 0rem 7rem;
     }
 
     .controls {
+        bottom: -3.5rem;
+        input {
+            -webkit-appearance: none;
+            background: $secondary;
+            appearance: none;
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            outline: none;
+            overflow: hidden;
+            border: 4px solid $first;
+            border-radius: 0rem 0rem 1rem 1rem;
+        }
 
-input {
-  -webkit-appearance: none;
-  appearance: none; 
-  width: 100%;
-  cursor: pointer;
-  outline: none;
-  overflow: hidden;
-  border-radius: 16px;
-}
+        input::-webkit-slider-runnable-track {
+            height: 15px;
+            background: $secondary;
+        }
 
-input::-webkit-slider-runnable-track {
-  height: 15px;
-  background: #ccc;
-  border-radius: 16px;
-}
+        input::-moz-range-track {
+            height: 15px;
+            background: $secondary;
+        }
 
-input::-moz-range-track {
-  height: 15px;
-  background: #ccc;
-  border-radius: 16px;
-}
+        input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 100%;
+            width: 1px;
+            background-color: $first;
+            border: 2px solid $first;
+            box-shadow: -400px 0 0 400px $first;
+        }
 
-input::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none; 
-  height: 15px;
-  width: 15px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: 2px solid #f50;
-  box-shadow: -407px 0 0 400px #f50;
-}
+        input::-moz-range-thumb {
+            height: 15px;
+            width: 15px;
 
-input::-moz-range-thumb {
-  height: 15px;
-  width: 15px;
-  background-color: #fff;
-  border-radius: 50%;
-  border: 1px solid #f50;
-  box-shadow: -407px 0 0 400px #f50;
-}
+            border: 1px solid #f50;
+            box-shadow: -407px 0 0 400px #f50;
+        }
+    }
+
+    .timer {
+        top: -3.5rem;
+    }
+
+    .play {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 3rem;
+        background-color: $first;
+        border-radius: 0rem 0rem 1rem 1rem;
+    }
+
+    .volume {
+        position: relative;
+    }
+
+    .timer {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    .timer-container {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 6rem;
+        background-color: $first;
+        color: $secondary;
+        border-radius: 1rem 1rem 0rem 0rem;
+    }
+
+    .go-back {
+        position: absolute;
+        top: 0rem;
+        right: 2rem;
     }
 }

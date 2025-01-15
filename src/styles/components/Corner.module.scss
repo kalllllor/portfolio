@@ -17,6 +17,15 @@
     }
 }
 
+.wrapper.small {
+    width: 2rem;
+    height: 2rem;
+    top: calc(var(--top) * 2);
+    bottom: calc(var(--bottom) * 2);
+    left: calc(var(--left) * 2);
+    right: calc(var(--right) * 2);
+}
+
 .wrapper::after {
     content: '';
     width: 4rem;
@@ -31,4 +40,17 @@
         width: 2rem;
         height: 2rem;
     }
+}
+
+.wrapper.small::after {
+    width: 2rem;
+    height: 2rem;
+}
+
+.secondary {
+    background-color: $first;
+}
+
+.secondary::after {
+    background-color: $secondary;
 }

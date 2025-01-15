@@ -14,6 +14,8 @@ export interface SocialMediaIconProps {
 export interface CornerProps {
     customStyle: React.CSSProperties;
     classVal?: string;
+    isSmall?: boolean;
+    isSecondary?: boolean;
 }
 
 export interface SingleProjectProps {
@@ -25,4 +27,8 @@ export interface SingleProjectProps {
 
 export interface ThemeSwitcherProps {
     titleBarWidth?: number;
+}
+
+export interface SocialButtonProps {
+    icon: 'github' | 'messenger' | 'instagram';
 }

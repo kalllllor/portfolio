@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    span {
+        font-size: 2rem;
+        margin-left: 0.5rem;
+    }
+    svg {
+        fill: $first;
+    }
+}

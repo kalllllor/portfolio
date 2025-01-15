@@ -4,7 +4,7 @@ import Contact from './components/Contact';
 import Hero from './components/Hero';
 import Info from './components/Info';
 import Projects from './components/Projects';
-import CanvasBackground from './components/CanvasBackground';
+
 import styles from './styles/components/App.module.scss';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProjectPage from './components/ProjectPage';

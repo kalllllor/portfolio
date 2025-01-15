@@ -9,7 +9,7 @@ import ThemeSwitcher from './ThemeSwitcher';
 const Hero = () => {
     const wrapperRef = useRef<HTMLDivElement>(null);
     const titleBarRef = useRef<HTMLDivElement>(null);
-    const [titleBarWidth, setTitleBarWidth] = useState<number | null>(null);
+    const [titleBarWidth, setTitleBarWidth] = useState<number>(0);
 
     useEffect(() => {
         if (titleBarRef.current) {

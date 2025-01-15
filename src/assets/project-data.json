@@ -3,28 +3,40 @@
         {
             "id": 1,
             "name": "Project 1",
-            "description": "This is project 1",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut volutpat turpis, ac sodales risus. Vestibulum cursus nisi sodales semper tempus. Aliquam molestie, enim nec tincidunt placerat, orci nunc convallis nulla, volutpat auctor lectus libero in ex. Mauris accumsan eros facilisis orci pellentesque congue. Integer sodales diam et accumsan aliquam. Vivamus aliquam, justo a accumsan vehicula, odio nibh sodales nulla, sed lacinia sapien ipsum ac lacus. Pellentesque mollis venenatis bibendum. Vestibulum nisi lectus, condimentum ac convallis vel, eleifend at lacus. Duis lacus purus, cursus in nibh sit amet, iaculis porta magna. Nunc pretium velit eros, non aliquam nisi efficitur et.",
+                "Duis blandit erat diam, sed dignissim arcu dignissim id. Nulla tempus fringilla finibus. Phasellus scelerisque urna at erat porta finibus. Duis felis purus, interdum ut urna id, tincidunt euismod lacus. Quisque condimentum sit amet augue ut tincidunt. Nam a condimentum massa. Vestibulum nec tincidunt ipsum, sed finibus sem. Integer ultrices sodales turpis nec lacinia. Aenean commodo dolor eu eros luctus, sit amet dapibus metus aliquam. Aenean justo mi, vehicula sit amet velit sit amet, bibendum vestibulum ipsum. Sed hendrerit ipsum ac neque pharetra iaculis. Maecenas non sagittis lacus, eu sagittis mauris. Sed sit amet blandit dui."
+            ],
             "videoUrl": "test-video.mp4",
             "photos": []
         },
         {
             "id": 2,
             "name": "Project 2",
-            "description": "This is project 2",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut volutpat turpis, ac sodales risus. Vestibulum cursus nisi sodales semper tempus. Aliquam molestie, enim nec tincidunt placerat, orci nunc convallis nulla, volutpat auctor lectus libero in ex. Mauris accumsan eros facilisis orci pellentesque congue. Integer sodales diam et accumsan aliquam. Vivamus aliquam, justo a accumsan vehicula, odio nibh sodales nulla, sed lacinia sapien ipsum ac lacus. Pellentesque mollis venenatis bibendum. Vestibulum nisi lectus, condimentum ac convallis vel, eleifend at lacus. Duis lacus purus, cursus in nibh sit amet, iaculis porta magna. Nunc pretium velit eros, non aliquam nisi efficitur et.",
+                "Duis blandit erat diam, sed dignissim arcu dignissim id. Nulla tempus fringilla finibus. Phasellus scelerisque urna at erat porta finibus. Duis felis purus, interdum ut urna id, tincidunt euismod lacus. Quisque condimentum sit amet augue ut tincidunt. Nam a condimentum massa. Vestibulum nec tincidunt ipsum, sed finibus sem. Integer ultrices sodales turpis nec lacinia. Aenean commodo dolor eu eros luctus, sit amet dapibus metus aliquam. Aenean justo mi, vehicula sit amet velit sit amet, bibendum vestibulum ipsum. Sed hendrerit ipsum ac neque pharetra iaculis. Maecenas non sagittis lacus, eu sagittis mauris. Sed sit amet blandit dui."
+            ],
             "videoUrl": "test-video.mp4",
             "photos": []
         },
         {
             "id": 3,
             "name": "Project 3",
-            "description": "This is project 3",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut volutpat turpis, ac sodales risus. Vestibulum cursus nisi sodales semper tempus. Aliquam molestie, enim nec tincidunt placerat, orci nunc convallis nulla, volutpat auctor lectus libero in ex. Mauris accumsan eros facilisis orci pellentesque congue. Integer sodales diam et accumsan aliquam. Vivamus aliquam, justo a accumsan vehicula, odio nibh sodales nulla, sed lacinia sapien ipsum ac lacus. Pellentesque mollis venenatis bibendum. Vestibulum nisi lectus, condimentum ac convallis vel, eleifend at lacus. Duis lacus purus, cursus in nibh sit amet, iaculis porta magna. Nunc pretium velit eros, non aliquam nisi efficitur et.",
+                "Duis blandit erat diam, sed dignissim arcu dignissim id. Nulla tempus fringilla finibus. Phasellus scelerisque urna at erat porta finibus. Duis felis purus, interdum ut urna id, tincidunt euismod lacus. Quisque condimentum sit amet augue ut tincidunt. Nam a condimentum massa. Vestibulum nec tincidunt ipsum, sed finibus sem. Integer ultrices sodales turpis nec lacinia. Aenean commodo dolor eu eros luctus, sit amet dapibus metus aliquam. Aenean justo mi, vehicula sit amet velit sit amet, bibendum vestibulum ipsum. Sed hendrerit ipsum ac neque pharetra iaculis. Maecenas non sagittis lacus, eu sagittis mauris. Sed sit amet blandit dui."
+            ],
             "videoUrl": "test-video.mp4",
             "photos": []
         },
         {
             "id": 4,
             "name": "Project 4",
-            "description": "This is project 3",
+            "description": [
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut volutpat turpis, ac sodales risus. Vestibulum cursus nisi sodales semper tempus. Aliquam molestie, enim nec tincidunt placerat, orci nunc convallis nulla, volutpat auctor lectus libero in ex. Mauris accumsan eros facilisis orci pellentesque congue. Integer sodales diam et accumsan aliquam. Vivamus aliquam, justo a accumsan vehicula, odio nibh sodales nulla, sed lacinia sapien ipsum ac lacus. Pellentesque mollis venenatis bibendum. Vestibulum nisi lectus, condimentum ac convallis vel, eleifend at lacus. Duis lacus purus, cursus in nibh sit amet, iaculis porta magna. Nunc pretium velit eros, non aliquam nisi efficitur et.",
+                "Duis blandit erat diam, sed dignissim arcu dignissim id. Nulla tempus fringilla finibus. Phasellus scelerisque urna at erat porta finibus. Duis felis purus, interdum ut urna id, tincidunt euismod lacus. Quisque condimentum sit amet augue ut tincidunt. Nam a condimentum massa. Vestibulum nec tincidunt ipsum, sed finibus sem. Integer ultrices sodales turpis nec lacinia. Aenean commodo dolor eu eros luctus, sit amet dapibus metus aliquam. Aenean justo mi, vehicula sit amet velit sit amet, bibendum vestibulum ipsum. Sed hendrerit ipsum ac neque pharetra iaculis. Maecenas non sagittis lacus, eu sagittis mauris. Sed sit amet blandit dui."
+            ],
             "videoUrl": "test-video.mp4",
             "photos": []
         }
