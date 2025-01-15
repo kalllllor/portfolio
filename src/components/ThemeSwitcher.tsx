@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/components/ThemeSwitcher.module.scss';
 import { ThemeSwitcherProps } from '../utils/types';
-
+import CanvasBackground from './CanvasBackground';
 const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ titleBarWidth = 0 }) => {
     const [isDarkMode, setIsDarkMode] = useState(false);
-    console.log(titleBarWidth);
+
     useEffect(() => {
         document.documentElement.style.setProperty('--first-color', isDarkMode ? '#212227' : '#F8F8F8');
         document.documentElement.style.setProperty('--secondary-color', isDarkMode ? '#F8F8F8' : '#212227');
@@ -19,13 +19,16 @@ const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({ titleBarWidth = 0 }) => {
     };
 
     return (
-        <button
-            className={isDarkMode ? `${styles.switchButton} ${styles['dark-mode']}` : `${styles.switchButton} ${styles['light-mode']}`}
-            onClick={toggleTheme}
-        >
-            <img className={`${styles.icon} ${styles.sun}`} src="/assets/sun.png" alt="Sun" />
-            <img className={`${styles.icon} ${styles.moon}`} src="/assets/moon.png" alt="Moon" />
-        </button>
+        <>
+            <CanvasBackground primary={isDarkMode ? '#212227' : '#F8F8F8'} secondary={isDarkMode ? '#F8F8F8' : '#212227'} />
+            <button
+                className={isDarkMode ? `${styles.switchButton} ${styles['dark-mode']}` : `${styles.switchButton} ${styles['light-mode']}`}
+                onClick={toggleTheme}
+            >
+                <img className={`${styles.icon} ${styles.sun}`} src="/assets/sun.png" alt="Sun" />
+                <img className={`${styles.icon} ${styles.moon}`} src="/assets/moon.png" alt="Moon" />
+            </button>
+        </>
     );
 };
 

@@ -1,25 +1,23 @@
 import React, { useRef, useEffect } from 'react';
 import styles from '../styles/components/CanvasBackground.module.scss';
 import p5 from 'p5';
+import { CanvasBackgroundProps } from '../utils/types';
 
-const CanvasBackground: React.FC = () => {
+const CanvasBackground: React.FC<CanvasBackgroundProps> = ({ primary, secondary }) => {
     const myRef = useRef<HTMLDivElement>(null);
-    let pg;
-    const Sketch = (p: p5) => {
-        const firstColor = getComputedStyle(document.documentElement).getPropertyValue('--first-color');
-        const secondaryColor = getComputedStyle(document.documentElement).getPropertyValue('--secondary-color');
 
+    const Sketch = (p: p5) => {
         p.setup = () => {
-            pg = p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
+            p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
             p.angleMode(p.DEGREES);
-            p.background(firstColor);
+            p.background(primary);
             p.strokeWeight(5);
             p.noFill();
-            p.stroke(secondaryColor);
+            p.stroke(secondary);
         };
 
         p.draw = () => {
-            p.background(firstColor);
+            p.background(primary);
 
             p.orbitControl();
 
@@ -38,15 +36,18 @@ const CanvasBackground: React.FC = () => {
 
         p.windowResized = () => {
             p.resizeCanvas(p.windowWidth, p.windowHeight);
-            p.background(firstColor);
+            p.background(primary);
+            p.stroke(secondary);
         };
     };
 
     useEffect(() => {
         if (myRef.current) {
+            console.log(myRef.current);
             new p5(Sketch, myRef.current);
         }
-    }, []);
+        console.log(111);
+    }, [primary, secondary]);
 
     return <div ref={myRef} className={styles.wrapper}></div>;
 };

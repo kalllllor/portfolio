@@ -26,7 +26,7 @@ const Hero = () => {
     };
 
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} id="home">
             <ThemeSwitcher titleBarWidth={titleBarWidth} />
             <div className={styles['left-bar']}>
                 <div className={styles.socials}>

@@ -7,9 +7,10 @@ const Menu: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const containerRef = useRef<HTMLDivElement>(null);
 
-    const menuItems = ['HOME', 'ABOUT', 'CONTACT', 'GALLERY'];
+    const menuItems = ['HOME', 'PROJECTS', 'ABOUT', 'CONTACT'];
 
     const handleClick = (item: string, index: number) => {
+        console.log(item);
         setSelected(item);
         if (containerRef.current) {
             const menuItem = containerRef.current.children[index] as HTMLElement;
@@ -17,6 +18,11 @@ const Menu: React.FC = () => {
                 left: `${menuItem.offsetLeft}px`,
                 width: `${menuItem.offsetWidth}px`,
             });
+        }
+        const section = document.getElementById(item.toLowerCase());
+        console.log(section);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
         }
     };
 

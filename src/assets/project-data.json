@@ -11,31 +11,29 @@
                 "W efekcie tych rozważań powstał interaktywny interfejs, w którym wykorzystano 64 fotorezystory badające natężenie światła. Otrzymywane dane były przesyłane do oprogramowania sterującego projekcją laserową, w której światło było rozszczepiane za pomocą siatki dyfrakcyjnej.",
                 "Wizualizacja miała na celu ukazanie procesu „pochłaniania” światła przez czarną dziurę, przywodząc na myśl efekt grawitacyjnego ogniskowania."
             ],
-            "videoUrl": "gravity.mp4",
             "media": ["gravity.mp4", "photo.jpg", "photo2.jpg", "photo3.jpg"],
             "tags": ["Laser", "Touchdesigner", "Interaktywność"]
         },
         {
             "id": 2,
-            "name": "Project 2",
+            "name": "Samotnosc",
+            "folder": "loneliness",
             "description": [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut volutpat turpis, ac sodales risus. Vestibulum cursus nisi sodales semper tempus. Aliquam molestie, enim nec tincidunt placerat, orci nunc convallis nulla, volutpat auctor lectus libero in ex. Mauris accumsan eros facilisis orci pellentesque congue. Integer sodales diam et accumsan aliquam. Vivamus aliquam, justo a accumsan vehicula, odio nibh sodales nulla, sed lacinia sapien ipsum ac lacus. Pellentesque mollis venenatis bibendum. Vestibulum nisi lectus, condimentum ac convallis vel, eleifend at lacus. Duis lacus purus, cursus in nibh sit amet, iaculis porta magna. Nunc pretium velit eros, non aliquam nisi efficitur et.",
-                "Duis blandit erat diam, sed dignissim arcu dignissim id. Nulla tempus fringilla finibus. Phasellus scelerisque urna at erat porta finibus. Duis felis purus, interdum ut urna id, tincidunt euismod lacus. Quisque condimentum sit amet augue ut tincidunt. Nam a condimentum massa. Vestibulum nec tincidunt ipsum, sed finibus sem. Integer ultrices sodales turpis nec lacinia. Aenean commodo dolor eu eros luctus, sit amet dapibus metus aliquam. Aenean justo mi, vehicula sit amet velit sit amet, bibendum vestibulum ipsum. Sed hendrerit ipsum ac neque pharetra iaculis. Maecenas non sagittis lacus, eu sagittis mauris. Sed sit amet blandit dui."
+                "Wychodząc od pojęcia demosceny skupiłem się na przedstawieniu historii relacji człowieka osamotnionego w świecie, w kontakcie z technologię i samym sobą. Deformacja i odkształcenie reprezentuje wejście ludzkości w erę posthumanizmu. "
             ],
-            "videoUrl": "test-video.mp4",
-            "media": [],
-            "tags": ["tag1", "tag2", "tag3"]
+            "media": ["video.mp4", "photo1.jpg", "photo2.jpg"],
+            "tags": ["Unreal Engine 5", "Animacja", "Blender"]
         },
         {
             "id": 3,
-            "name": "Project 3",
+            "name": "Drzewo",
+            "folder": "chair",
             "description": [
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut volutpat turpis, ac sodales risus. Vestibulum cursus nisi sodales semper tempus. Aliquam molestie, enim nec tincidunt placerat, orci nunc convallis nulla, volutpat auctor lectus libero in ex. Mauris accumsan eros facilisis orci pellentesque congue. Integer sodales diam et accumsan aliquam. Vivamus aliquam, justo a accumsan vehicula, odio nibh sodales nulla, sed lacinia sapien ipsum ac lacus. Pellentesque mollis venenatis bibendum. Vestibulum nisi lectus, condimentum ac convallis vel, eleifend at lacus. Duis lacus purus, cursus in nibh sit amet, iaculis porta magna. Nunc pretium velit eros, non aliquam nisi efficitur et.",
                 "Duis blandit erat diam, sed dignissim arcu dignissim id. Nulla tempus fringilla finibus. Phasellus scelerisque urna at erat porta finibus. Duis felis purus, interdum ut urna id, tincidunt euismod lacus. Quisque condimentum sit amet augue ut tincidunt. Nam a condimentum massa. Vestibulum nec tincidunt ipsum, sed finibus sem. Integer ultrices sodales turpis nec lacinia. Aenean commodo dolor eu eros luctus, sit amet dapibus metus aliquam. Aenean justo mi, vehicula sit amet velit sit amet, bibendum vestibulum ipsum. Sed hendrerit ipsum ac neque pharetra iaculis. Maecenas non sagittis lacus, eu sagittis mauris. Sed sit amet blandit dui."
             ],
-            "videoUrl": "test-video.mp4",
-            "media": [],
-            "tags": ["tag1", "tag2", "tag3"]
+            "media": ["video.mp4", "video2.mp4"],
+            "tags": ["Houdini", "Differential Growth", "Las"]
         },
         {
             "id": 4,

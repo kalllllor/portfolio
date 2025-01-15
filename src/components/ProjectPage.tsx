@@ -12,9 +12,10 @@ const ProjectPage: React.FC = () => {
     const project = data.projects.find(({ id }) => id === Number(projectId));
     const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(false);
-    const [volume, setVolume] = useState(1);
+    const [volume, setVolume] = useState(0.5);
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
+    const [isVideo, setIsVideo] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
 
     useEffect(() => {
@@ -50,13 +51,15 @@ const ProjectPage: React.FC = () => {
                 videoElement?.removeEventListener('ended', handleVideoEnded);
             };
         }
-    }, [isPlaying, volume]);
+    }, [isPlaying, volume, isVideo]);
+
+    useEffect(() => setIsVideo(media[currentPhotoIndex].includes('.mp4')), [currentPhotoIndex]);
 
     if (!project) {
         return <div>Project not found</div>;
     }
 
-    const { name, description, media, videoUrl, tags, folder } = project;
+    const { name, description, media, tags, folder } = project;
 
     const handleNextPhoto = () => {
         setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % (media?.length || 1));
@@ -94,27 +97,28 @@ const ProjectPage: React.FC = () => {
     return (
         <div className={styles.wrapper}>
             <div className={styles.content}>
-                <div className={styles['go-back']}>
+                <div id="home" className={styles['go-back']}>
                     <GoBackButton />
                 </div>
-                <div className={styles.info}>
+
+                <div id="about" className={styles.info}>
                     <h2>{name}</h2>
                     {description.map((paragraph, index) => (
                         <p key={index}>{paragraph}</p>
                     ))}
                 </div>
-                <div className={styles['media-wrapper']}>
+                <div id="gallery" className={styles['media-wrapper']}>
                     <div className={styles['media-container']}>
                         {media.length && (
                             <div className={styles['video-player']}>
                                 <div className={styles['video-container']}>
-                                    {media[currentPhotoIndex].includes('.mp4') ? (
+                                    {isVideo ? (
                                         <video src={`/projects/${folder}/${media[currentPhotoIndex]}`} ref={videoRef} />
                                     ) : (
                                         <img src={`/projects/${folder}/${media[currentPhotoIndex]}`} />
                                     )}
                                 </div>
-                                <div className={styles.controls}>
+                                <div className={isVideo ? styles.controls : `${styles.controls} ${styles['hidden-bottom']}`}>
                                     <div className={styles.play}>
                                         <Corner customStyle={cornerStyles.first} isSmall isSecondary />
                                         <Corner customStyle={cornerStyles.second} isSmall isSecondary />
@@ -129,7 +133,7 @@ const ProjectPage: React.FC = () => {
                                         <span className={styles.percentage}>{Math.round(volume * 100)}%</span>
                                     </div>
                                 </div>
-                                <div className={styles.timer}>
+                                <div className={isVideo ? styles.timer : `${styles.timer} ${styles['hidden-top']}`}>
                                     <div className={styles['timer-container']}>
                                         <Corner customStyle={cornerStyles.third} isSmall isSecondary />
                                         <Corner customStyle={cornerStyles.fourth} isSmall isSecondary />
@@ -140,16 +144,16 @@ const ProjectPage: React.FC = () => {
                                     <button className={styles.back} onClick={handlePrevPhoto}>
                                         <Corner customStyle={cornerStyles.fifth} isSmall isSecondary />
                                         <Corner customStyle={cornerStyles.sixth} isSmall isSecondary />
-                                        <span className={styles.buttonImg}>
+                                        <div className={styles.buttonImg}>
                                             <img src="/assets/play.png" />
-                                        </span>
+                                        </div>
                                     </button>
                                     <button className={styles.forward} onClick={handleNextPhoto}>
                                         <Corner customStyle={cornerStyles.seventh} isSmall isSecondary />
                                         <Corner customStyle={cornerStyles.eighth} isSmall isSecondary />
-                                        <span className={styles.buttonImg}>
+                                        <div className={styles.buttonImg}>
                                             <img src="/assets/play.png" />
-                                        </span>
+                                        </div>
                                     </button>
                                 </div>
                             </div>
@@ -161,6 +165,9 @@ const ProjectPage: React.FC = () => {
                             <span key={index}>{tag}</span>
                         ))}
                     </div>
+                </div>
+                <div id="contact" className={styles.contact}>
+                    {/* Contact section content */}
                 </div>
             </div>
         </div>

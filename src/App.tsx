@@ -7,7 +7,6 @@ import Projects from './components/Projects';
 import styles from './styles/components/App.module.scss';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import ProjectPage from './components/ProjectPage';
-import CanvasBackground from './components/CanvasBackground';
 
 const App: React.FC = () => {
     useEffect(() => {
@@ -34,7 +33,6 @@ const App: React.FC = () => {
 
 const Home: React.FC = () => (
     <div className={styles.wrapper}>
-        <CanvasBackground />
         <Hero />
         <Info />
         <Projects />
