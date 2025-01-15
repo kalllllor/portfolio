@@ -8,7 +8,9 @@ const SingleProject = ({ title, isFirst, isLast, onClick }: SingleProjectProps) 
         bottom: { '--bottom': '-1rem', '--left': '0rem', transform: 'rotate(90deg)' },
     };
 
-    const wrapperStyle = isLast ? { margin: '0px' } : {};
+    const random = Math.floor(Math.random() * 10);
+    console.log(random);
+    const wrapperStyle = isLast ? { margin: '0px', '--random': `${random}%` } : { '--random': `${random}%` };
 
     return (
         <div className={styles.wrapper} style={wrapperStyle} onClick={onClick}>

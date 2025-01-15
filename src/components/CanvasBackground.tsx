@@ -43,10 +43,11 @@ const CanvasBackground: React.FC<CanvasBackgroundProps> = ({ primary, secondary 
 
     useEffect(() => {
         if (myRef.current) {
-            console.log(myRef.current);
+            while (myRef.current.firstChild) {
+                myRef.current.removeChild(myRef.current.firstChild);
+            }
             new p5(Sketch, myRef.current);
         }
-        console.log(111);
     }, [primary, secondary]);
 
     return <div ref={myRef} className={styles.wrapper}></div>;

@@ -29,22 +29,24 @@
             "name": "Drzewo",
             "folder": "chair",
             "description": [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut volutpat turpis, ac sodales risus. Vestibulum cursus nisi sodales semper tempus. Aliquam molestie, enim nec tincidunt placerat, orci nunc convallis nulla, volutpat auctor lectus libero in ex. Mauris accumsan eros facilisis orci pellentesque congue. Integer sodales diam et accumsan aliquam. Vivamus aliquam, justo a accumsan vehicula, odio nibh sodales nulla, sed lacinia sapien ipsum ac lacus. Pellentesque mollis venenatis bibendum. Vestibulum nisi lectus, condimentum ac convallis vel, eleifend at lacus. Duis lacus purus, cursus in nibh sit amet, iaculis porta magna. Nunc pretium velit eros, non aliquam nisi efficitur et.",
-                "Duis blandit erat diam, sed dignissim arcu dignissim id. Nulla tempus fringilla finibus. Phasellus scelerisque urna at erat porta finibus. Duis felis purus, interdum ut urna id, tincidunt euismod lacus. Quisque condimentum sit amet augue ut tincidunt. Nam a condimentum massa. Vestibulum nec tincidunt ipsum, sed finibus sem. Integer ultrices sodales turpis nec lacinia. Aenean commodo dolor eu eros luctus, sit amet dapibus metus aliquam. Aenean justo mi, vehicula sit amet velit sit amet, bibendum vestibulum ipsum. Sed hendrerit ipsum ac neque pharetra iaculis. Maecenas non sagittis lacus, eu sagittis mauris. Sed sit amet blandit dui."
+                "Projekt dotyczy unikalnego połączenia technik skanowania 3D i zaawansowanych narzędzi do animacji proceduralnej. W ramach pracy wykonano skan powalonego drzewa w lesie, który został następnie zaimportowany do programu Houdini. Celem było wykorzystanie geometrii naturalnego obiektu jako podstawy do stworzenia realistycznej symulacji. Proces ten pozwolił na uchwycenie autentycznych detali drzewa, takich jak faktura kory czy nieregularne kształty, co stanowiło kluczowy element projektu.",
+                "Na bazie zaimportowanego modelu stworzono dynamiczną animację wzrostu grzybów za pomocą algorytmu differential growth. Technika ta, inspirowana procesami naturalnymi, umożliwiła generowanie realistycznych struktur, które organicznie rozwijały się na powierzchni drzewa. Projekt nie tylko ukazuje możliwości technologii proceduralnych, ale także podkreśla potencjał kreatywny w łączeniu natury z cyfrową sztuką. Wynik to unikalna, artystyczna interpretacja organicznych procesów, które wprowadziły życie do statycznej formy drzewa."
             ],
             "media": ["video.mp4", "video2.mp4"],
             "tags": ["Houdini", "Differential Growth", "Las"]
         },
         {
             "id": 4,
-            "name": "Project 4",
+            "name": "Monitoring",
+            "folder": "monitoring",
             "description": [
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ut volutpat turpis, ac sodales risus. Vestibulum cursus nisi sodales semper tempus. Aliquam molestie, enim nec tincidunt placerat, orci nunc convallis nulla, volutpat auctor lectus libero in ex. Mauris accumsan eros facilisis orci pellentesque congue. Integer sodales diam et accumsan aliquam. Vivamus aliquam, justo a accumsan vehicula, odio nibh sodales nulla, sed lacinia sapien ipsum ac lacus. Pellentesque mollis venenatis bibendum. Vestibulum nisi lectus, condimentum ac convallis vel, eleifend at lacus. Duis lacus purus, cursus in nibh sit amet, iaculis porta magna. Nunc pretium velit eros, non aliquam nisi efficitur et.",
-                "Duis blandit erat diam, sed dignissim arcu dignissim id. Nulla tempus fringilla finibus. Phasellus scelerisque urna at erat porta finibus. Duis felis purus, interdum ut urna id, tincidunt euismod lacus. Quisque condimentum sit amet augue ut tincidunt. Nam a condimentum massa. Vestibulum nec tincidunt ipsum, sed finibus sem. Integer ultrices sodales turpis nec lacinia. Aenean commodo dolor eu eros luctus, sit amet dapibus metus aliquam. Aenean justo mi, vehicula sit amet velit sit amet, bibendum vestibulum ipsum. Sed hendrerit ipsum ac neque pharetra iaculis. Maecenas non sagittis lacus, eu sagittis mauris. Sed sit amet blandit dui."
+                "Projekt dotyczy stworzenia innowacyjnego systemu monitoringu dedykowanego przestrzeniom galeryjnym, który pozwala na jednoczesne wykrywanie osób, obiektów sztuki oraz samej przestrzeni. Zaawansowane algorytmy oparte na uczeniu maszynowym analizują dane, identyfikując obecność i zachowanie każdego elementu. Celem systemu jest uchwycenie interakcji i wzajemnych relacji między odwiedzającymi, dziełami sztuki a otoczeniem, tworząc dynamiczny obraz całej przestrzeni wystawowej.",
+                "Kluczowym elementem projektu jest algorytm napisany w Pythonie przy użyciu biblioteki OpenCV, który odpowiada za rozpoznawanie obiektów i osób. Dane te są następnie przetwarzane w programie TouchDesigner, gdzie wizualizowane są połączenia między wszystkimi elementami w galerii. System tworzy interaktywne sieci, ukazując powiązania i skupienia, które nadają przestrzeni spójny, dynamiczny charakter.",
+                "Projekt podkreśla możliwości technologii w kontekście sztuki i przestrzeni publicznych, łącząc zaawansowaną analizę danych z artystycznym wyrazem. Dzięki wykorzystaniu TouchDesigner i OpenCV, stworzono narzędzie, które nie tylko monitoruje, ale także wizualnie interpretuje relacje w przestrzeni galerii, nadając jej nowy wymiar interaktywności i głębi."
             ],
             "videoUrl": "test-video.mp4",
             "media": [],
-            "tags": ["tag1", "tag2", "tag3"]
+            "tags": ["Monitoring", "Machine Learning", "Touchdesigner"]
         }
     ]
 }
