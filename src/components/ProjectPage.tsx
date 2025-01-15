@@ -56,14 +56,14 @@ const ProjectPage: React.FC = () => {
         return <div>Project not found</div>;
     }
 
-    const { name, description, photos, videoUrl, tags, folder } = project;
+    const { name, description, media, videoUrl, tags, folder } = project;
 
     const handleNextPhoto = () => {
-        setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % (photos?.length || 1));
+        setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % (media?.length || 1));
     };
 
     const handlePrevPhoto = () => {
-        setCurrentPhotoIndex((prevIndex) => (prevIndex - 1 + (photos?.length || 1)) % (photos?.length || 1));
+        setCurrentPhotoIndex((prevIndex) => (prevIndex - 1 + (media?.length || 1)) % (media?.length || 1));
     };
 
     const handlePlayPause = () => {
@@ -85,6 +85,10 @@ const ProjectPage: React.FC = () => {
         second: { '--top': '0rem', '--right': '-1rem', transform: 'rotate(90deg)' },
         third: { '--top': '0.5rem', '--left': '-1rem', transform: 'rotate(270deg)' },
         fourth: { '--top': '0.5rem', '--right': '-1rem', transform: 'rotate(0deg)' },
+        fifth: { '--top': '1.5rem', '--right': '0rem', transform: 'rotate(180deg)' },
+        sixth: { '--top': '-1rem', '--right': '0rem', transform: 'rotate(270deg)' },
+        seventh: { '--top': '1.5rem', '--left': '0rem', transform: 'rotate(90deg)' },
+        eighth: { '--top': '-1rem', '--left': '0rem', transform: 'rotate(0deg)' },
     };
 
     return (
@@ -101,10 +105,14 @@ const ProjectPage: React.FC = () => {
                 </div>
                 <div className={styles['media-wrapper']}>
                     <div className={styles['media-container']}>
-                        {videoUrl ? (
+                        {media.length && (
                             <div className={styles['video-player']}>
                                 <div className={styles['video-container']}>
-                                    <video src={`/projects/${folder}/${videoUrl}`} ref={videoRef} />
+                                    {media[currentPhotoIndex].includes('.mp4') ? (
+                                        <video src={`/projects/${folder}/${media[currentPhotoIndex]}`} ref={videoRef} />
+                                    ) : (
+                                        <img src={`/projects/${folder}/${media[currentPhotoIndex]}`} />
+                                    )}
                                 </div>
                                 <div className={styles.controls}>
                                     <div className={styles.play}>
@@ -129,30 +137,22 @@ const ProjectPage: React.FC = () => {
                                     </div>
                                 </div>
                                 <div className={styles.arrows}>
-                                    <button className={styles.back}>
-                                        <Corner customStyle={cornerStyles.first} isSmall isSecondary />
-                                        <Corner customStyle={cornerStyles.second} isSmall isSecondary />
-                                        <button onClick={handlePlayPause}>
+                                    <button className={styles.back} onClick={handlePrevPhoto}>
+                                        <Corner customStyle={cornerStyles.fifth} isSmall isSecondary />
+                                        <Corner customStyle={cornerStyles.sixth} isSmall isSecondary />
+                                        <span className={styles.buttonImg}>
                                             <img src="/assets/play.png" />
-                                        </button>
+                                        </span>
                                     </button>
-                                    <button className={styles.forward}>
-                                        <Corner customStyle={cornerStyles.first} isSmall isSecondary />
-                                        <Corner customStyle={cornerStyles.second} isSmall isSecondary />
-                                        <button onClick={handlePlayPause}>
+                                    <button className={styles.forward} onClick={handleNextPhoto}>
+                                        <Corner customStyle={cornerStyles.seventh} isSmall isSecondary />
+                                        <Corner customStyle={cornerStyles.eighth} isSmall isSecondary />
+                                        <span className={styles.buttonImg}>
                                             <img src="/assets/play.png" />
-                                        </button>
+                                        </span>
                                     </button>
                                 </div>
                             </div>
-                        ) : (
-                            photos.length && (
-                                <div className={styles.carousel}>
-                                    <button onClick={handlePrevPhoto}>Previous</button>
-                                    <img src={`/projects/${folder}/${photos[currentPhotoIndex]}`} alt={`Slide ${currentPhotoIndex + 1}`} />
-                                    <button onClick={handleNextPhoto}>Next</button>
-                                </div>
-                            )
                         )}
                     </div>
                     <div className={styles.tags}>

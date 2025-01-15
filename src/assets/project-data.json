@@ -12,7 +12,7 @@
                 "Wizualizacja miała na celu ukazanie procesu „pochłaniania” światła przez czarną dziurę, przywodząc na myśl efekt grawitacyjnego ogniskowania."
             ],
             "videoUrl": "gravity.mp4",
-            "photos": ["photo.jpg", "photo2.jpg", "photo3.jpg"],
+            "media": ["gravity.mp4", "photo.jpg", "photo2.jpg", "photo3.jpg"],
             "tags": ["Laser", "Touchdesigner", "Interaktywność"]
         },
         {
@@ -23,7 +23,7 @@
                 "Duis blandit erat diam, sed dignissim arcu dignissim id. Nulla tempus fringilla finibus. Phasellus scelerisque urna at erat porta finibus. Duis felis purus, interdum ut urna id, tincidunt euismod lacus. Quisque condimentum sit amet augue ut tincidunt. Nam a condimentum massa. Vestibulum nec tincidunt ipsum, sed finibus sem. Integer ultrices sodales turpis nec lacinia. Aenean commodo dolor eu eros luctus, sit amet dapibus metus aliquam. Aenean justo mi, vehicula sit amet velit sit amet, bibendum vestibulum ipsum. Sed hendrerit ipsum ac neque pharetra iaculis. Maecenas non sagittis lacus, eu sagittis mauris. Sed sit amet blandit dui."
             ],
             "videoUrl": "test-video.mp4",
-            "photos": [],
+            "media": [],
             "tags": ["tag1", "tag2", "tag3"]
         },
         {
@@ -34,7 +34,7 @@
                 "Duis blandit erat diam, sed dignissim arcu dignissim id. Nulla tempus fringilla finibus. Phasellus scelerisque urna at erat porta finibus. Duis felis purus, interdum ut urna id, tincidunt euismod lacus. Quisque condimentum sit amet augue ut tincidunt. Nam a condimentum massa. Vestibulum nec tincidunt ipsum, sed finibus sem. Integer ultrices sodales turpis nec lacinia. Aenean commodo dolor eu eros luctus, sit amet dapibus metus aliquam. Aenean justo mi, vehicula sit amet velit sit amet, bibendum vestibulum ipsum. Sed hendrerit ipsum ac neque pharetra iaculis. Maecenas non sagittis lacus, eu sagittis mauris. Sed sit amet blandit dui."
             ],
             "videoUrl": "test-video.mp4",
-            "photos": [],
+            "media": [],
             "tags": ["tag1", "tag2", "tag3"]
         },
         {
@@ -45,7 +45,7 @@
                 "Duis blandit erat diam, sed dignissim arcu dignissim id. Nulla tempus fringilla finibus. Phasellus scelerisque urna at erat porta finibus. Duis felis purus, interdum ut urna id, tincidunt euismod lacus. Quisque condimentum sit amet augue ut tincidunt. Nam a condimentum massa. Vestibulum nec tincidunt ipsum, sed finibus sem. Integer ultrices sodales turpis nec lacinia. Aenean commodo dolor eu eros luctus, sit amet dapibus metus aliquam. Aenean justo mi, vehicula sit amet velit sit amet, bibendum vestibulum ipsum. Sed hendrerit ipsum ac neque pharetra iaculis. Maecenas non sagittis lacus, eu sagittis mauris. Sed sit amet blandit dui."
             ],
             "videoUrl": "test-video.mp4",
-            "photos": [],
+            "media": [],
             "tags": ["tag1", "tag2", "tag3"]
         }
     ]
